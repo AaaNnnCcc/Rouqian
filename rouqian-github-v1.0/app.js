@@ -1,7 +1,7 @@
 
 (()=>{
 const root=document.getElementById('budget-dough-reports'),$=s=>root.querySelector(s),money=n=>(n/100).toLocaleString('zh-CN',{maximumFractionDigits:2}),key='rouqian-web-v1:'+location.pathname.replace(/index\.html$/, '');
-const initial=()=>({cycle:'month',total:100000,cats:[{id:'food',name:'买菜',budget:20000,spent:0,color:'#bfd5a2'},{id:'sport',name:'羽毛球',budget:10000,spent:0,color:'#eec285'},{id:'sub',name:'会员订阅',budget:20000,spent:0,color:'#c9bee4'},{id:'car',name:'车费',budget:20000,spent:0,color:'#a9cbd8'},{id:'pool',name:'待分配',budget:30000,spent:0,color:'#d4d4bc'}],history:[],deleted:[],archives:[],period:new Date().getFullYear()+'-'+String(new Date().getMonth()+1).padStart(2,'0')});
+const initial=()=>({cycle:'month',total:100000,cats:[{id:'pool',name:'待分配',budget:100000,spent:0,color:'#d4d4bc'}],history:[],deleted:[],archives:[],period:new Date().getFullYear()+'-'+String(new Date().getMonth()+1).padStart(2,'0')});
 let state=initial(),selected=null,cut=5000,previous=null,drag=null,canStore=true,draft=null,deleting=null,reportIndex=null,storageBlocked=false;
 try{const raw=localStorage.getItem(key);if(raw){const p=JSON.parse(raw);validateData(p);state=p;}}catch(e){canStore=false;storageBlocked=true;}
 state.deleted ||= [];state.archives ||= [];state.period ||= '2026-09';state.transactions ||= [];state.archives.forEach(p=>{p.transactions ||= [];p.deleted ||= [];});
