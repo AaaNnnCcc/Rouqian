@@ -1,12 +1,48 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>揉钱 · GitHub 发布与使用指南</title><style>body{font:17px/1.85 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;background:#f7f5ef;color:#29372e;margin:0;padding:28px}main{max-width:850px;margin:auto}h1{font-size:30px}h2{font-size:23px;margin-top:36px}code{background:#e7eadf;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere}a{color:#315d43}li{margin:9px 0}table{border-collapse:collapse;width:100%}th,td{border-bottom:1px solid #d4d9cc;text-align:left;vertical-align:top;padding:12px}aside{padding:18px;background:#e9eddc;border-radius:14px}button{font:inherit}</style></head><body><main><a href="./index.html">← 打开揉钱</a><h1>把「揉钱」放上 GitHub，<br>在 Mac 和 iPhone 上使用</h1><p>无需微信开发者工具、Xcode、终端或编程。你需要一个 GitHub 账号、这份解压后的文件，以及电脑浏览器。</p><aside>GitHub 存放和发布软件；账单保存在你的设备。Mac 与 iPhone 不会自动同步。不要把个人账本备份上传到 GitHub。</aside>
-<h2>1．下载、解压，找到正确文件层级</h2><ol><li>下载对话中的 <code>rouqian-github-v1.0.zip</code>。</li><li>Mac 双击 ZIP 解压。在解压目录里找到 <code>index.html</code>；它旁边应有 <code>app.js</code>、<code>style.css</code>、<code>sw.js</code>、<code>manifest.webmanifest</code>、三个 PNG 图标、<code>README.md</code> 和本指南。</li><li>之后上传这些文件本身。不要上传 ZIP，也不要再包一层文件夹。</li></ol>
-<h2>2．创建 GitHub 仓库</h2><ol><li>浏览器打开 <a href="https://github.com/">github.com</a>，注册或登录。</li><li>右上角 <strong>＋ → New repository</strong>，或直接打开 <a href="https://github.com/new">github.com/new</a>。</li><li>Repository name 填 <code>rouqian</code>；如已占用，可填 <code>rouqian-budget</code>。</li><li>选择 <strong>Public</strong>。GitHub Free 支持公共仓库的 Pages；此仓库公开的是代码，不是你在网页里记的账。</li><li>勾选 <strong>Add a README file</strong>，其他先保持默认，再点 <strong>Create repository</strong>。</li></ol>
-<h2>3．上传源码</h2><ol><li>进入仓库首页的 <strong>Code</strong> 页，点 <strong>Add file → Upload files</strong>。</li><li>在访达打开第 1 步的文件夹，选中里面所有文件，拖进网页上传区域。保留文件原名与大小写。</li><li>等待上传完成，在提交说明中填写 <code>Upload Rouqian web app</code>。</li><li>选择直接提交到 <strong>main</strong>，点 <strong>Commit changes</strong>。如果出现已有 README 的同名替换，使用本项目提供的 README 即可。</li><li>返回仓库首页，确认第一层就能看到 <strong>index.html</strong>。这是最容易选错的一步。</li></ol>
-<h2>4．开启 GitHub Pages</h2><ol><li>点仓库上方 <strong>Settings</strong>，不是个人账号的 Settings。</li><li>左侧找到 <strong>Pages</strong>，通常位于 Code and automation 区域。</li><li>在 Build and deployment 中，<strong>Source → Deploy from a branch</strong>。</li><li><strong>Branch → main</strong>；旁边目录选 <strong>/(root)</strong>；点 <strong>Save</strong>。</li><li>等待自动构建。可在仓库 <strong>Actions</strong> 查看 <strong>pages build and deployment</strong> 是否完成。首次发布可能需要数分钟。</li><li>回到 Settings → Pages，以页面出现的 <strong>Visit site</strong> 为准。网址一般为 <code>https://你的GitHub用户名.github.io/rouqian/</code>。</li></ol><p>打开的是 <code>github.io</code> 网站网址。<code>github.com/用户名/rouqian</code> 是源码仓库，不是运行中的 App。</p>
-<h2>5．Mac 上使用</h2><ol><li>Safari 或 Chrome 打开 Pages 网址，即可操作。</li><li>在 macOS Sonoma 14 或更新系统中，可在 Safari 用 <strong>文件 → 添加到程序坞（Add to Dock）</strong>，或分享菜单中的相同选项。</li><li>名称填「揉钱」，添加后从 Dock 打开。较旧系统直接用浏览器，并收藏网址即可。</li><li>如果浏览器里已有账单，先导出备份，打开 Dock App 后检查数据；如为空，再恢复备份。</li></ol>
-<h2>6．iPhone 上使用</h2><ol><li>将 Pages 网址发到自己的手机，然后复制到 <strong>Safari</strong> 打开。</li><li>点 <strong>分享</strong>（方框向上箭头；部分布局在页面菜单内）。</li><li>选择 <strong>添加到主屏幕</strong>。若未看到，向下找「编辑操作」。</li><li>名称填「揉钱」。如出现 <strong>作为 Web App 打开 / Open as Web App</strong> 开关，打开它，再点「添加」。</li><li>回主屏幕点图标，首次联网打开，向下找到「离线缓存已准备」提示；之后可尝试飞行模式重新打开。初次加载未完成、缓存被回收或数据被清理时仍需联网。</li><li>请尽早选定主屏幕入口。Safari 和主屏幕 App 的数据不保证共享，已有数据先备份再恢复。</li></ol>
-<h2>7．先用测试数据验收</h2><ol><li>新增「宠物」项目，额度设 0，确认出现在列表。</li><li>羽毛球 → 切一块 → 50 元，按住小块拖到买菜：买菜 250，羽毛球 50，总额 1,000。</li><li>记两笔相同备注、再记一笔不同备注，到「周期账单」查看合并是否符合预期。</li><li>预算设置将总额改为 500，重新填写分类额度并保存。</li><li>新周期开始后查看旧账单，累计三期可测试本期相对前两期均值。</li><li>关闭重开检查是否保留；导出一份备份确认能找到文件。正式记账前，测试账单可通过撤销最后操作处理；此版未提供整账本清空按钮。</li></ol>
-<h2>8．Mac 与 iPhone 间转移账本</h2><ol><li>在数据完整的设备上，找到 <strong>数据与安装 → 导出备份</strong>。</li><li>确认得到 <code>rouqian-backup-日期.json</code>；Mac 通常在下载列表，iPhone 可保存到「文件」。同日多次下载可能自动加序号。</li><li>通过隔空投送或 iCloud Drive 把文件送到另一台设备。</li><li>在另一台设备打开揉钱，先备份当地账本，再在 <strong>从备份恢复</strong> 中选择 JSON，确认替换。</li></ol><aside>恢复会替换目标设备整个账本，不会合并两台设备各自新增的记录。当前建议用一台设备为主要记账设备，另一台按需导入最新备份。</aside>
-<h2>9．常见问题</h2><table><tr><th>现象</th><th>检查方式</th></tr><tr><td>404 页面</td><td>确认 Actions 部署成功、来源为 main / root，仓库根目录有小写 index.html，以 Pages 的 Visit site 链接为准。</td></tr><tr><td>看到 README 或代码</td><td>你可能打开的是 github.com 仓库。改用 github.io 网站网址，检查 index.html 是否上传到根目录。</td></tr><tr><td>页面无样式或按钮无反应</td><td>确认 app.js、style.css 与 index.html 在同一级，文件名未被改成 app (1).js 等。</td></tr><tr><td>手机打不开网址</td><td>先确认 Mac 能打开同一网址，再换手机的 Wi-Fi／蜂窝网络排查。GitHub Pages 在不同网络的可达性可能有差异。</td></tr><tr><td>没有主屏幕添加选项</td><td>先用 Safari 打开完整网站链接；在分享列表向下滚动或编辑操作。</td></tr><tr><td>另一台设备没有账单</td><td>这是本地账本，需手动导出／恢复。不是登录 GitHub 后自动同步。</td></tr><tr><td>显示保存失败</td><td>立即导出备份；检查是否处于隐私浏览或存储空间不足。不要先清空数据。</td></tr><tr><td>更新后仍是旧版</td><td>保持联网重新打开并刷新，确认 Pages 部署已完成。先导出备份；不要直接清除网站数据。</td></tr></table>
-<h2>10．以后更新软件</h2><p>先导出备份。在原仓库 Add file → Upload files，上传新版同名文件并提交。保持仓库名、Pages 设置、网址不变。我们每次发布源码更新都会更改离线缓存版本。更新代码不需要上传任何账本备份。</p><p>本版已完成逻辑验证；当前制作环境无法运行 Safari 或 iPhone 真机，需按第 7 步在你的设备确认。尚未登录你的 GitHub 创建仓库，也没有替你发布。</p>
-<h2>官方说明</h2><p><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">GitHub Pages 发布设置</a> · <a href="https://support.apple.com/guide/iphone/iphea86e5236/ios">iPhone 主屏幕安装</a> · <a href="https://support.apple.com/104996">Mac 添加到 Dock</a></p><p>版本 1.0 · 2026-10-02</p></main></body></html>
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>揉钱 · 使用指南</title>
+<style>body{font:17px/1.85 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;background:#f7f5ef;color:#29372e;margin:0;padding:28px}main{max-width:850px;margin:auto}h1{font-size:30px}h2{font-size:23px;margin-top:36px}h3{font-size:18px;margin-top:26px}code{background:#e7eadf;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere}a{color:#315d43}li{margin:9px 0}@media(max-width:480px){body{padding:22px 18px}h1{font-size:28px}}</style></head><body><main>
+<a href="./index.html">← 返回揉钱</a>
+<h1>欢迎使用揉钱</h1>
+<p>感谢你选择揉钱，让我们一起为生活里的每一份需要，留出合适的预算。</p>
+<p>这个月想吃好一点，下个月想多运动一些，偶尔也想为喜欢的东西留一点余地。生活在变化，预算也可以跟着调整。</p>
+<p>揉钱的核心，是让你亲手调节额度，自由分配预算。 每个项目的预算都会显示为一条彩色额度。你可以像切面团一样，从一个项目中“切出”一部分，再拖到另一个项目中：一边变短，一边变长，总预算保持不变。</p>
+<p>例如，从娱乐预算中切出 50 元，挪到买菜预算里，就能为这个月的餐桌多留一点空间。</p>
+<p>点击项目下方的「切一块」，设置金额后，按住小块拖到目标项目即可；也可以直接选择转入的项目。已经花掉的金额不能再挪动，能自由调整的是剩余的额度。</p>
+<p>你还可以按周或按月设置总预算，随时新增或删除项目，并在每笔支出发生后记录金额、分类和备注。在「周期账单」中，可以查看钱具体花在哪里，以及与以往周期相比的变化。</p>
+<p>预算是帮助你安排生活的工具。希望揉钱能让每一次取舍，都更直观、更从容。</p>
+<h2>1．在 Mac 上使用</h2>
+<p>使用 Safari 或 Chrome 打开揉钱网址，即可开始使用。建议收藏网址，方便下次打开。</p>
+<p>如果你的 Mac 使用 macOS Sonoma 14 或更新系统，还可以将揉钱添加到程序坞：</p>
+<ol><li>使用 Safari 打开揉钱。</li><li>在顶部菜单选择「文件 → 添加到程序坞」。</li><li>将名称设为「揉钱」，点击添加。</li><li>之后可以直接从程序坞打开。</li></ol>
+<p>较旧的 macOS 系统可以继续通过浏览器使用。</p>
+<p><strong>如果已经在浏览器中记过账，请先导出备份。</strong> 从程序坞打开后，如果没有显示原来的账本，再用备份恢复。</p>
+<h2>2．在 iPhone 上使用</h2>
+<p>将揉钱添加到主屏幕后，就能通过图标直接打开。</p>
+<ol><li>使用 <strong>Safari</strong> 打开揉钱网址。</li><li>点击「分享」按钮，通常是方框中带向上箭头的图标。</li><li>选择「添加到主屏幕」。如果没有看到，可向下滚动分享菜单，或查看「编辑操作」。</li><li>将名称设为「揉钱」。如果出现「作为 Web App 打开」开关，请开启，再点击「添加」。</li><li>返回主屏幕，点击揉钱图标。</li></ol>
+<p>首次从主屏幕打开时，请保持联网，等待页面下方出现「离线缓存已准备」提示。缓存准备好后，可以在离线时使用；如果缓存被系统清理，则需要重新联网加载。</p>
+<p>建议选定一个固定入口记账。如果已经在 Safari 中记过账，请先导出备份；从主屏幕打开后，如未显示原账本，再恢复备份。</p>
+<h2>3．在 Mac 与 iPhone 之间转移账本</h2>
+<p><strong>目前，揉钱的账本保存在各自设备中，Mac 与 iPhone 不会自动同步。</strong> 你可以通过备份文件转移账本。</p>
+<ol><li>在保存着最新账本的设备上，找到「数据与安装」，点击「导出备份」。</li><li>保存生成的文件，文件名类似 <code>rouqian-backup-2026-10-02.json</code>。Mac 上通常可以在下载列表中找到；iPhone 上可保存到「文件」。</li><li>通过隔空投送或 iCloud 云盘，将备份文件传到另一台设备。</li><li>在另一台设备打开揉钱。如果这台设备已有需要保留的记录，请先导出一份备份。</li><li>在「从备份恢复」中选择收到的文件，确认替换。</li></ol>
+<p><strong>恢复备份会替换目标设备的整个账本，不会合并两台设备各自新增的记录。</strong></p>
+<p>建议以一台设备为主要记账设备，另一台按需导入最新备份，避免两边分别记账后遗漏记录。备份文件包含个人账目，请妥善保存，不要上传到公开的 GitHub 仓库。</p>
+<h2>4．常见问题</h2>
+<h3>为什么打开后只有“Rouqian”标题，或者显示代码？</h3>
+<p>请确认打开的是揉钱的完整使用网址。GitHub 仓库页面用于存放代码；如果网址遗漏了软件所在的文件夹，也可能只显示项目名称。请使用发布者提供的完整链接。</p>
+<h3>网址打不开，或者出现 404，怎么办？</h3>
+<p>先检查网址是否完整。可以切换 Wi-Fi 或蜂窝网络重试；如果仍无法打开，请联系发布者确认网站是否正常。</p>
+<h3>页面没有样式，或者按钮没有反应，怎么办？</h3>
+<p>保持联网，刷新页面后重试。如果仍然异常，请将页面截图、设备型号及浏览器名称提供给发布者，方便排查。</p>
+<h3>为什么 iPhone 上找不到「添加到主屏幕」？</h3>
+<p>请先在 Safari 中打开网址，再查看分享菜单。该选项可能位于菜单下方，也可以查看「编辑操作」。</p>
+<h3>为什么另一台设备上没有我的账单？</h3>
+<p>账本保存在你记账时使用的设备和浏览器中，目前不会自动同步。请在原设备导出备份，再到另一台设备恢复。</p>
+<h3>为什么有些额度不能挪动？</h3>
+<p>已经发生的支出会保留在原项目中，只有尚未花掉的额度可以挪动。项目剩余额度为零时，就不能继续切出金额。</p>
+<h3>为什么总预算不能降到我想设置的金额？</h3>
+<p>当前周期的总预算不能低于已经发生的支出。如果是在规划下一个周期，请在「预算设置」中选择应用到「新周期」，再设置新的总额并分配项目额度。</p>
+<h3>页面显示保存失败，怎么办？</h3>
+<p>请立即导出备份，保留当前账本，再检查设备存储空间或浏览器是否限制了本地保存。不要先清除网站数据，以免丢失记录。</p>
+<h3>更新后仍然显示旧版，怎么办？</h3>
+<p>保持联网，关闭后重新打开并刷新。Mac 上可以尝试按「⌘ Command + Shift + R」强制刷新。如果仍未更新，请联系发布者确认更新是否完成。不要为了刷新版本直接清除网站数据。</p>
+</main></body></html>

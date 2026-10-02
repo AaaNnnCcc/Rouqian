@@ -1,5 +1,5 @@
 // Change VERSION when publishing an updated app bundle.
-const VERSION='rouqian-v1.0.0';
+const VERSION='rouqian-v1.0.1';
 const PREFIX='rouqian:'+self.registration.scope;
 const CACHE=PREFIX+VERSION;
 const FILES=['./','./index.html','./style.css','./app.js','./manifest.webmanifest','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./GUIDE.html'];
