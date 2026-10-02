@@ -2,17 +2,7 @@
 
 适用于 Mac 浏览器和 iPhone Safari，可添加到主屏幕；不需要微信开发者工具、Xcode、npm、服务器或 API 密钥。
 
-## 最短发布步骤
 
-1. 在 GitHub 创建名为 `rouqian` 的 **Public** 仓库，勾选 **Add a README file**，点 **Create repository**。
-2. 解压下载的 ZIP，进入包含 `index.html` 的那一层。
-3. 仓库选择 **Add file → Upload files**。把这一层的所有文件直接拖入上传区，点 **Commit changes**。
-4. 确认仓库首页直接显示 `index.html`、`app.js`、`style.css`、`sw.js` 等，而不是只有 ZIP 或一层额外文件夹。
-5. 仓库 **Settings → Pages → Build and deployment**：Source 选 **Deploy from a branch**；Branch 选 **main**，目录选 **/(root)**，点 **Save**。
-6. 等待部署完成，以 Pages 页面出现的 **Visit site** 链接为准。一般格式为 `https://你的用户名.github.io/rouqian/`。
-7. iPhone 用 Safari 打开该网址：分享 → 添加到主屏幕；若看到「作为 Web App 打开」，将其开启。
-
-更详细的中文步骤、排错和备份说明见 `GUIDE.html`，可在电脑双击阅读。这个文件也是网站内「安装、发布与使用说明」的目标。
 
 ## 能用什么
 
